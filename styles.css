@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.bg-google-header {
+    background: linear-gradient(90deg, #4285F4, #34A853, #FBBC05, #FF5733);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#message-area {
+    text-align: center;
+}
+
+#response-area {
+    text-align: center;
+}
+
+#result-area {
+    text-align: center;
+}
+
+#happy-icon, #hangman-icon {
+    width: 100px;
+}
