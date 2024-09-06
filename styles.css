@@ -1,11 +1,22 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Evita el scroll si las imágenes son más grandes que la ventana */
 }
 
 .bg-google-header {
     background: linear-gradient(90deg, #4285F4, #34A853, #FBBC05, #FF5733);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 @keyframes gradient {
@@ -14,18 +25,41 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-#message-area {
-    text-align: center;
+nav {
+    margin-top: 60px; /* Espacio para la cabecera fija */
 }
 
-#response-area {
+#message-area, #response-area {
     text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
 }
 
-#result-area {
-    text-align: center;
+#response-area, #result-area {
+    display: none;
 }
 
 #happy-icon, #hangman-icon {
-    width: 100px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#result-area {
+    display: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
