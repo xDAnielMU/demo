@@ -3,51 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Web Interactiva</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Propuesta Interactiva</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Cabecera -->
-    <header class="bg-google-header text-white text-center py-3">
-        <h1>Mi Página Web</h1>
-    </header>
 
-    <!-- Menú -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Inicio</a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Quienes Somos</a>
-                </li>
+    <!-- Cabecera con nombre y banner -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Propuesta Interactiva</a>
+        <!-- Botón del menú hamburguesa -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Enlaces de navegación -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link text-white" href="#">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Nosotros</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Contenido Principal -->
-    <div class="container mt-4">
-        <div id="message-area">
-            <label for="nameInput">Digita tu nombre:</label>
-            <input type="text" id="nameInput" class="form-control mb-3">
-            <button id="submitBtn" class="btn btn-primary d-none">Enviar</button>
-        </div>
+    <!-- Banner de imágenes -->
+    <div class="banner-images">
+        <img src="jiraf.png" alt="Imagen 1">
+        <img src="perro.png" alt="Imagen 2">
+        <img src="yumi.jpg" alt="Imagen 3">
+    </div>
 
-        <div id="response-area" class="d-none mt-4">
-            <p id="greeting-message"></p>
+    <!-- Contenido Principal -->
+    <div class="container text-center mt-5">
+        <h1>Propuesta Interactiva</h1>
+        <p>Escribe tu nombre y envía:</p>
+
+        <!-- Formulario para ingresar el nombre -->
+        <input type="text" id="nameInput" class="form-control" placeholder="Tu nombre aquí" style="max-width: 400px; margin: 0 auto;">
+        <!-- El botón estará oculto inicialmente -->
+        <button id="submitBtn" class="btn btn-primary mt-3 d-none">Enviar</button>
+
+        <!-- Área de pregunta -->
+        <div id="response-area" class="mt-5 d-none">
+            <h3 id="greeting-message"></h3>
             <button id="yesBtn" class="btn btn-success">Sí</button>
             <button id="noBtn" class="btn btn-danger">No</button>
         </div>
 
-        <div id="result-area" class="mt-4 d-none">
-            <img id="happy-icon" src="nero_feliz.jpg" class="d-none" alt="Icono Feliz">
-            <img id="hangman-icon" src="triste.jpg" class="d-none" alt="Icono Ahorcado">
+        <!-- Área de resultado con imágenes -->
+        <div id="result-area" class="mt-5 d-none">
+            <img id="happy-icon" src="nero_feliz.jpg" alt="Feliz" class="d-none">
+            <img id="hangman-icon" src="triste.jpg" alt="Triste" class="d-none">
         </div>
     </div>
 
-    <script src="scripts.js"></script>
+    <!-- Bootstrap y jQuery necesarios -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Tu script -->
+    <script src="script.js"></script>
+
 </body>
 </html>
